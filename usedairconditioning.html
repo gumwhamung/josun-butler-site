@@ -1,2 +1,72 @@
-<!-- 중고 에어컨 설명 페이지 HTML 코드 삽입 예정 -->
-<html><head><title>usedairconditioning.html</title></head><body><h1>usedairconditioning.html</h1></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>중고에어컨 서비스 - 조선의 집사</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body class="flex bg-gradient-to-br from-yellow-100 via-white to-yellow-50 text-gray-800 fade-in-up">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-yellow-200 text-yellow-900 min-h-screen p-6 space-y-4 shadow-md">
+    <h2 class="text-2xl font-bold mb-6">조선의 집사</h2>
+    <nav class="space-y-2">
+      <a href="index.html" class="block py-2 px-4 rounded hover:bg-yellow-300">메인페이지</a>
+      <a href="cleanexplanation.html" class="block py-2 px-4 rounded hover:bg-yellow-300">청소</a>
+      <a href="repairexplanation.html" class="block py-2 px-4 rounded hover:bg-yellow-300">간단수리</a>
+      <a href="paperingexplanation.html" class="block py-2 px-4 rounded hover:bg-yellow-300">도배/장판</a>
+      <a href="airconditioningexplanation.html" class="block py-2 px-4 rounded hover:bg-yellow-300">에어컨청소</a>
+      <a href="airconditioninginstallation.html" class="block py-2 px-4 rounded hover:bg-yellow-300">에어컨설치</a>
+      <a href="usedairconditioning.html" class="block py-2 px-4 bg-yellow-300 text-yellow-900 font-semibold rounded">중고에어컨</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-5xl mx-auto p-8 space-y-12">
+    <header class="text-center">
+      <h1 class="text-4xl font-bold text-yellow-800">중고에어컨 서비스</h1>
+      <p class="mt-2 text-lg text-gray-700">검수 완료된 중고 에어컨으로 가성비 있게 시원한 여름을 준비하세요</p>
+    </header>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-yellow-800 mb-4">중고 에어컨 판매</h2>
+      <img src="img/usedaircon_sale.jpg" alt="중고 에어컨 판매" class="rounded shadow-md mb-3" />
+      <p class="text-gray-700 leading-relaxed">
+        검수된 중고 에어컨을 저렴한 가격에 제공하며, 모든 제품은 냉방 성능과 외관 상태를 확인한 후 판매됩니다.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-yellow-800 mb-4">중고 에어컨 설치</h2>
+      <img src="img/usedaircon_install.jpg" alt="중고 에어컨 설치" class="rounded shadow-md mb-3" />
+      <p class="text-gray-700 leading-relaxed">
+        중고 에어컨을 구매한 고객을 위한 설치 서비스를 제공합니다. 기존 설치환경을 고려한 맞춤형 시공이 가능합니다.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-yellow-800 mb-4">중고 에어컨 수거 및 매입</h2>
+      <img src="img/usedaircon_pickup.jpg" alt="중고 에어컨 수거" class="rounded shadow-md mb-3" />
+      <p class="text-gray-700 leading-relaxed">
+        사용하지 않는 중고 에어컨을 직접 방문 수거하며, 상태에 따라 적절한 매입가를 책정하여 구매해드립니다.
+      </p>
+    </section>
+
+    <div class="text-center mt-10">
+      <a href="index.html" class="inline-block px-6 py-3 bg-yellow-700 hover:bg-yellow-800 text-white rounded-full transition">돌아가기</a>
+    </div>
+  </main>
+</body>
+</html>

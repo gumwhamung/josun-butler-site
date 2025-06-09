@@ -1,2 +1,182 @@
-<!-- 메인페이지 HTML 코드 삽입 예정 -->
-<html><head><title>index.html</title></head><body><h1>index.html</h1></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>josunmainsite</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .door-enter {
+      position: fixed;
+      inset: 0;
+      background-color: #e0f2ff;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: opacity 1.2s ease;
+    }
+    .door-left,
+    .door-right {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #bae6fd;
+      transition: transform 1.8s cubic-bezier(0.86, 0, 0.07, 1);
+      z-index: 51;
+    }
+    .door-left {
+      left: 0;
+      border-right: 1px solid #90cdf4;
+    }
+    .door-right {
+      right: 0;
+      border-left: 1px solid #90cdf4;
+    }
+    .door-open .door-left {
+      transform: translateX(-100%);
+    }
+    .door-open .door-right {
+      transform: translateX(100%);
+    }
+    .door-open {
+      opacity: 0;
+    }
+    .door-text {
+      z-index: 52;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0369a1;
+      animation: fadeIn 1.2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 via-blue-50 to-white text-gray-800">
+  <div id="doorAnimation" class="door-enter">
+    <div class="door-left"></div>
+    <div class="door-right"></div>
+    <div class="door-text">조선의 집사에 오신 것을 환영합니다</div>
+  </div>
+
+  <header class="relative bg-gradient-to-r from-sky-600 via-blue-500 to-sky-600 text-white text-center py-16 shadow-xl">
+    <div class="absolute inset-0 opacity-25 bg-[url('https://images.unsplash.com/photo-1581578731548-c64695cc695d?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center"></div>
+    <div class="relative z-10">
+      <h1 class="text-5xl font-extrabold tracking-wide drop-shadow-xl">조선의 집사</h1>
+      <p class="text-xl mt-4 font-light">당신의 집을 위한 완벽한 해결사</p>
+    </div>
+  </header>
+
+  <nav class="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 text-white flex justify-center space-x-4 py-3 shadow-md">
+    <a href="#services" class="hover:bg-blue-800 px-4 py-2 rounded transition duration-300">하는 일</a>
+    <a href="#comparison" class="hover:bg-blue-800 px-4 py-2 rounded transition duration-300">전후 비교</a>
+    <a href="#contact" class="hover:bg-blue-800 px-4 py-2 rounded transition duration-300">연락처</a>
+  </nav>
+
+  <section class="py-16 px-6 max-w-6xl mx-auto" id="services">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-10">우리가 하는 일</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div onclick="location.href='cleanexplanation.html'" class="cursor-pointer bg-gradient-to-br from-blue-100 via-sky-100 to-white hover:shadow-2xl transition p-6 rounded-xl text-center">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-full p-3 shadow-md">
+            <i data-lucide="wand-2" class="w-8 h-8 text-blue-500"></i>
+          </div>
+        </div>
+        <div class="text-lg font-semibold text-gray-700">청소</div>
+      </div>
+      <div onclick="location.href='repairexplanation.html'" class="cursor-pointer bg-gradient-to-br from-green-100 via-teal-100 to-white hover:shadow-2xl transition p-6 rounded-xl text-center">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-full p-3 shadow-md">
+            <i data-lucide="wrench" class="w-8 h-8 text-green-500"></i>
+          </div>
+        </div>
+        <div class="text-lg font-semibold text-gray-700">간단수리</div>
+      </div>
+      <div onclick="location.href='paperingexplanation.html'" class="cursor-pointer bg-gradient-to-br from-yellow-100 via-orange-100 to-white hover:shadow-2xl transition p-6 rounded-xl text-center">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-full p-3 shadow-md">
+            <i data-lucide="layers" class="w-8 h-8 text-yellow-500"></i>
+          </div>
+        </div>
+        <div class="text-lg font-semibold text-gray-700">도배/장판</div>
+      </div>
+      <div onclick="location.href='airconditioningexplanation.html'" class="cursor-pointer bg-gradient-to-br from-indigo-100 via-blue-100 to-white hover:shadow-2xl transition p-6 rounded-xl text-center">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-full p-3 shadow-md">
+            <i data-lucide="wind" class="w-8 h-8 text-indigo-500"></i>
+          </div>
+        </div>
+        <div class="text-lg font-semibold text-gray-700">에어컨청소</div>
+      </div>
+      <div onclick="location.href='airconditioninginstallation.html'" class="cursor-pointer bg-gradient-to-br from-purple-100 via-pink-100 to-white hover:shadow-2xl transition p-6 rounded-xl text-center">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-full p-3 shadow-md">
+            <i data-lucide="cpu" class="w-8 h-8 text-purple-500"></i>
+          </div>
+        </div>
+        <div class="text-lg font-semibold text-gray-700">에어컨설치</div>
+      </div>
+      <div onclick="location.href='Usedairconditioning.html'" class="cursor-pointer bg-gradient-to-br from-gray-100 via-blue-50 to-white hover:shadow-2xl transition p-6 rounded-xl text-center">
+        <div class="flex justify-center mb-4">
+          <div class="bg-white rounded-full p-3 shadow-md">
+            <i data-lucide="refresh-ccw" class="w-8 h-8 text-gray-500"></i>
+          </div>
+        </div>
+        <div class="text-lg font-semibold text-gray-700">중고에어컨</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison" class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold text-center mb-10">전후 비교</h2>
+    <div class="swiper rounded-xl overflow-hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/before_after1.jpg" alt="전후 비교 1" class="w-full"></div>
+        <div class="swiper-slide"><img src="img/before_after2.jpg" alt="전후 비교 2" class="w-full"></div>
+        <div class="swiper-slide"><img src="img/before_after3.jpg" alt="전후 비교 3" class="w-full"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-gray-100 py-16 px-4">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">연락처</h2>
+      <p class="mb-2"><strong>전화:</strong> 010-1234-5678</p>
+      <p class="mb-2"><strong>팩스:</strong> 055-9876-5432</p>
+      <p><strong>이메일:</strong> butler@chosun.co.kr</p>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white text-center py-6">
+    ⓒ 2025 조선의 집사. 모든 권리 보유.
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    window.addEventListener('load', () => {
+      lucide.createIcons();
+      setTimeout(() => {
+        const door = document.getElementById('doorAnimation');
+        door.classList.add('door-open');
+        setTimeout(() => door.remove(), 1600);
+      }, 400);
+    });
+  </script>
+</body>
+</html>
